@@ -11,7 +11,7 @@ image:
   width: 592
   height: 640
 video: null
-summary: JavaScript 环境默认地提供了各种功能。在这节课，我们将了解 Set 、Map 、Proxy 、Generator 、Iteration 的工作原理和更多知识！
+summary: JavaScript 环境默认地提供了各种功能。在这节课，我们将了解 Set、Map、Proxy、生成器以及迭代器的工作原理和更多知识！
 lesson_type: Classroom
 duration: 120
 is_project_lesson: false
@@ -85,7 +85,7 @@ concepts:
     key: 1e3f0012-b247-4325-a5e7-c10651481f20
     locale: zh-cn
     version: 1.0.0
-    title: Symbol（标识符）简介
+    title: Symbol 简介
     semantic_type: Concept
     updated_at: 'Mon Sep 11 2017 16:43:33 GMT+0000 (UTC)'
     is_public: true
@@ -97,7 +97,7 @@ concepts:
         key: c4fc6ef2-d4fd-4049-af72-3001ae15fdd7
         locale: zh-cn
         version: 1.0.0
-        title: Symbol（标识符）简介
+        title: Symbol 简介
         semantic_type: VideoAtom
         updated_at: 'Mon Sep 11 2017 16:43:33 GMT+0000 (UTC)'
         is_public: true
@@ -120,7 +120,7 @@ concepts:
     key: 100b565f-0e61-42e9-a2f4-332aa2f1a1b6
     locale: zh-cn
     version: 1.0.0
-    title: Symbol（标识符）
+    title: Symbol
     semantic_type: Concept
     updated_at: 'Mon Sep 11 2017 16:43:34 GMT+0000 (UTC)'
     is_public: true
@@ -138,11 +138,11 @@ concepts:
         updated_at: 'Mon Sep 11 2017 16:43:34 GMT+0000 (UTC)'
         is_public: true
         text: |-
-          # Symbols
+          # Symbols（标识符）
 
-          **Symbol**是一种独特的且不可变的数据类型，经常用来标识对象属性。
+          **Symbol** 是一种独特的且不可变的数据类型，经常用来标识对象属性。
 
-          要创建 Symbol ，输入 `Symbol()`，并添加一个可选的字符串作为其**描述**。
+          要创建 Symbol，输入 `Symbol()`，并添加一个可选的字符串作为其**描述**。
 
           ```js
           const sym1 = Symbol('apple');
@@ -173,7 +173,7 @@ concepts:
         updated_at: 'Mon Sep 11 2017 16:43:34 GMT+0000 (UTC)'
         is_public: true
         text: |
-          当然，依然很难弄明白，所以，我们来看一个之前视频中的示例，看看标识符的作用。下面是代表该示例中的bowl的代码。
+          当然，依然很难弄明白，所以，我们来看一个之前视频中的示例，看看标识符的作用。下面是代表该示例中的 bowl 的代码。
 
           ```js
           const bowl = {
@@ -183,7 +183,7 @@ concepts:
           };
           ```
 
-          bowl中包含水果，它们是碗的属性对象。但是，当我们添加第二个香蕉时，遇到了问题。
+          bowl 中包含水果，它们是碗的属性对象。但是，当我们添加第二个香蕉时，遇到了问题。
 
           ```js
           const bowl = {
@@ -262,11 +262,11 @@ concepts:
           > 8 <br>
           > 9 <br>
 
-          在第一节课，我们提到，任何可迭代的对象都可以使用新的 `for...of` 循环。在这节课的稍后阶段，我们还将学习 Set 和 Map ，它们也是内置可迭代类型。
+          在第一节课，我们提到，任何可迭代的对象都可以使用新的 `for...of` 循环。在这节课的稍后阶段，我们还将学习 Set 和 Map，它们也是内置可迭代类型。
 
           ## 工作原理
 
-          为了使对象可迭代，它必须实现**可迭代接口**。如果你之前使用的是 Java 或 C 语言等语言，那么你可能熟悉接口，但是如果没用过这些语言，其实就是为了让对象可迭代，它必须包含默认的迭代器方法。该方法将定义对象如何被迭代。
+          为了使对象可迭代，它必须实现**可迭代接口**。如果你之前使用的是 Java 或 C 语言等语言，那么你可能熟悉接口，但是如果没用过这些语言，接口其实就是为了让对象可迭代，它必须包含默认的迭代器方法。该方法将定义对象如何被迭代。
 
           **迭代器方法**（可通过常量 `[Symbol.iterator]` 获得）是一个无参数的函数，返回的是迭代器对象。迭代器对象是遵守迭代器协议的对象。
 
@@ -525,7 +525,7 @@ concepts:
     key: 2f7b76c6-d4a1-4168-98e4-662a17c3dd53
     locale: zh-cn
     version: 1.0.0
-    title: Set（集合）
+    title: Set
     semantic_type: Concept
     updated_at: 'Mon Sep 11 2017 16:43:44 GMT+0000 (UTC)'
     is_public: true
@@ -546,7 +546,7 @@ concepts:
         text: |
           # 数学意义上的集合
 
-          回忆下之前的数学知识，Set 就是唯一项的集合。例如，`{2, 4, 5, 6}` 是Set，因为每个数字都是唯一的，只出现一次。但是，`{1, 1, 2, 4}` 不是 Set，因为它_包含重复的项目_（1 出现了两次！）。
+          回忆下之前的数学知识，Set 就是唯一项的集合。例如，`{2, 4, 5, 6}` 是 Set，因为每个数字都是唯一的，只出现一次。但是，`{1, 1, 2, 4}` 不是 Set，因为它_包含重复的项目_（1 出现了两次！）。
 
           在 JavaScript 中，我们已经可以使用数组表示类似于数学意义上的集合。
 
@@ -610,7 +610,7 @@ concepts:
         key: b473de9c-52e1-4098-afc2-7e7fdfb4cde8
         locale: zh-cn
         version: 1.0.0
-        title: 唯一 Set
+        title: Set 唯一性
         semantic_type: CheckboxQuizAtom
         updated_at: 'Mon Sep 11 2017 16:43:44 GMT+0000 (UTC)'
         is_public: true
@@ -644,7 +644,7 @@ concepts:
     key: 0396aaa7-ccc8-49b5-93ad-725c2f61f889
     locale: zh-cn
     version: 1.0.0
-    title: 编辑 Set（集合）
+    title: 修改 Set
     semantic_type: Concept
     updated_at: 'Mon Sep 11 2017 16:43:45 GMT+0000 (UTC)'
     is_public: true
@@ -662,7 +662,7 @@ concepts:
         updated_at: 'Mon Sep 11 2017 16:43:44 GMT+0000 (UTC)'
         is_public: true
         text: |-
-          ## 编辑 Set（集合）
+          ## 修改 Set
 
           创建 Set 后，你可能想要添加或删除条目。如何操作呢？可以使用名称对应的 `.add()` 和 `.delete()` 方法：
 
@@ -701,7 +701,7 @@ concepts:
     key: 50d51cb3-016f-432d-9de0-9f3b9b32f006
     locale: zh-cn
     version: 1.0.0
-    title: 使用 Set（集合）
+    title: 使用 Set
     semantic_type: Concept
     updated_at: 'Mon Sep 11 2017 16:43:46 GMT+0000 (UTC)'
     is_public: true
@@ -732,7 +732,7 @@ concepts:
           ```
           > `12`
 
-          注意，不能像数组那样通过索引访问 Set，因此使用 `.size` 属性，而不是 `.length` 属性来获取 Set 的大小。
+          注意，不能像数组那样通过索引访问 Set，因此要使用 `.size` 属性，而不是 `.length` 属性来获取 Set 的大小。
 
           ### 检查是否存在某个条目
           使用 `.has()` 方法可以检查 Set 中是否存在某个条目。如果 Set 中有该条目，则 `.has()` 将返回 `true`。如果 Set 中不存在该条目，则 `.has()` 将返回 `false`。
@@ -761,14 +761,14 @@ concepts:
         semantic_type: TextAtom
         updated_at: 'Mon Sep 11 2017 16:43:46 GMT+0000 (UTC)'
         is_public: true
-        text: '> **提示**：`.keys()` 方法将和 `.values()` 方法的行为完全一样：将Set的值返回到新的迭代器对象中。`.keys()` 方法是 `.values()` 方法的别名，和地图中的类似。你稍后将在这节课的地图部分看到 `.keys()` 方法。'
+        text: '> **提示**：`.keys()` 方法将和 `.values()` 方法的行为完全一样：将 Set 的值返回到新的迭代器对象中。`.keys()` 方法是 `.values()` 方法的别名，和 Map（映射）中的类似。你稍后将在这节课的 Map 部分看到 `.keys()` 方法。'
         instructor_notes: ''
         resources: null
   - id: 374318
     key: 32a8b076-b891-4993-9e47-648b9f7485c0
     locale: zh-cn
     version: 1.0.0
-    title: 集合与迭代器
+    title: Set 与迭代器
     semantic_type: Concept
     updated_at: 'Mon Sep 11 2017 16:43:47 GMT+0000 (UTC)'
     is_public: true
@@ -787,16 +787,16 @@ concepts:
         updated_at: 'Mon Sep 11 2017 16:43:46 GMT+0000 (UTC)'
         is_public: true
         text: |-
-          处理 Set（集合） 的最后一步是循环访问 Set。
+          处理 Set 的最后一步是循环访问 Set。
 
-          如果还记得之前介绍的 ES6 中的新可迭代协议和迭代器协议，那么你会想起 Set（集合）是内置可迭代类型。这意味着循环时的两件事：
+          如果还记得之前介绍的 ES6 中的新可迭代协议和迭代器协议，那么你会想起 Set 是内置可迭代类型。这意味着循环时的两件事：
 
-          1. 你可以使用 Set 的默认迭代器循环访问Set中的每一项。
-          2. 你可以使用新的 `for...of` 循环来循环访问Set中的每一项。
+          1. 你可以使用 Set 的默认迭代器循环访问 Set 中的每一项。
+          2. 你可以使用新的 `for...of` 循环来循环访问 Set 中的每一项。
 
           ## 使用 SetIterator
 
-          因为 `.values()` 方法返回新的迭代器对象（称为 `SetIterator`），你可以将该迭代器对象存储在变量中，并使用 `.next()` 访问Set中的每一项。
+          因为 `.values()` 方法返回新的迭代器对象（称为 `SetIterator`），你可以将该迭代器对象存储在变量中，并使用 `.next()` 访问 Set 中的每一项。
 
           ```js
           const iterator = months.values();
@@ -818,7 +818,7 @@ concepts:
         key: 3bd264cf-5967-461a-b394-186371840ca6
         locale: zh-cn
         version: 1.0.0
-        title: Set（集合）和迭代器的动画
+        title: Set 和迭代器的动画
         semantic_type: VideoAtom
         updated_at: 'Mon Sep 11 2017 16:43:46 GMT+0000 (UTC)'
         is_public: true
@@ -868,7 +868,7 @@ concepts:
     key: 98ba5617-7451-4f82-847a-cf407c35150c
     locale: zh-cn
     version: 1.0.0
-    title: 练习：使用 Set（集合）
+    title: 练习：使用 Set
     semantic_type: Concept
     updated_at: 'Mon Sep 11 2017 16:43:50 GMT+0000 (UTC)'
     is_public: true
@@ -895,7 +895,7 @@ concepts:
           * "strawberry"
           * "vanilla"
 
-          然后使用 `.delete()` 方法移除 Set 中的"strawberry"。
+          然后使用 `.delete()` 方法移除 Set 中的 "strawberry"。
 
           ## 你的代码：
         instructor_notes: ''
@@ -1129,7 +1129,7 @@ concepts:
     key: 5c3fd7d7-66b4-4a9c-b61d-33dd85b8cc0e
     locale: zh-cn
     version: 1.0.0
-    title: WeakSet（弱集合）
+    title: WeakSet
     semantic_type: Concept
     updated_at: 'Mon Sep 11 2017 16:43:52 GMT+0000 (UTC)'
     is_public: true
@@ -1151,13 +1151,13 @@ concepts:
         text: |-
           # 什么是 WeakSet（弱集合）？
 
-          弱集合和普通集合很像，但是具有以下关键区别：
+          WeakSet 和普通 Set 很像，但是具有以下关键区别：
 
-          1. 弱集合只能包含对象
-          2. 弱集合无法迭代，意味着不能循环访问其中的对象
-          3. 弱集合没有 `.clear()` 方法
+          1. WeakSet 只能包含对象
+          2. WeakSet 无法迭代，意味着不能循环访问其中的对象
+          3. WeakSet 没有 `.clear()` 方法
 
-          你可以像创建普通集合那样创建弱集合，但是需要使用 `WeakSet` 构造函数。
+          你可以像创建普通 Set 那样创建 WeakSet，但是需要使用 `WeakSet` 构造函数。
 
           ```js
           const student1 = { name: 'James', age: 26, gender: 'male' };
@@ -1169,14 +1169,14 @@ concepts:
           ```
           > `WeakSet {Object {name: 'Julia', age: 27, gender: 'female'}, Object {name: 'Richard', age: 31, gender: 'male'}, Object {name: 'James', age: 26, gender: 'male'}}`
 
-          …但是如果你尝试添加对象以外的内容，系统将报错！
+          但是如果你尝试添加对象以外的内容，系统将报错！
 
           ```js
           roster.add('Amanda');
           ```
           > `Uncaught TypeError: Invalid value used in weak set(…)`
 
-          这是预期到的行为，因为弱集合只能包含对象。但是为何只能包含对象？如果普通集合可以包含对象和其他类型的数据，为何还要使用弱集合？这个问题的答案与为何弱集合没有 `.clear()` 方法有很大的关系...
+          这是预期到的行为，因为 WeakSet 只能包含对象。但是为何只能包含对象？如果普通 Set 可以包含对象和其他类型的数据，为何还要使用 WeakSet？这个问题的答案与为何 WeakSet 没有 `.clear()` 方法有很大的关系……
         instructor_notes: ''
         resources: null
       - id: 374214
@@ -1192,7 +1192,7 @@ concepts:
 
           在 JavaScript 中，创建新的值时会分配内存，并且当这些值不再需要时，将自动释放内存。这种内存不再需要后释放内存的过程称为**垃圾回收**。
 
-          弱集合通过专门使用对象作为键值来利用这一点。如果将对象设为 `null`，则本质上是删除该对象。当 JavaScript 的垃圾回收器运行时，该对象之前占用的内存将被释放，以便稍后在程序中使用。
+          WeakSet 通过专门使用对象作为键值来利用这一点。如果将对象设为 `null`，则本质上是删除该对象。当 JavaScript 的垃圾回收器运行时，该对象之前占用的内存将被释放，以便稍后在程序中使用。
 
           ```js
           student3 = null;
@@ -1205,7 +1205,7 @@ concepts:
         key: 7c674835-62e2-4a41-acc6-36a5f5b2d04f
         locale: zh-cn
         version: 1.0.0
-        title: 弱集合动画
+        title: WeakSet 动画
         semantic_type: VideoAtom
         updated_at: 'Mon Sep 11 2017 16:43:51 GMT+0000 (UTC)'
         is_public: true
@@ -1232,16 +1232,16 @@ concepts:
         updated_at: 'Mon Sep 11 2017 16:43:52 GMT+0000 (UTC)'
         is_public: true
         text: |-
-          这种机制的好处在于你不用去担心要删掉对 WeakSet 中已删除对象的引用，JavaScript 会帮你删除！如果对象被删除，当垃圾回收器运行时，该对象也会从弱集合中删除。这样的话，如果你想要一种高效、轻便的解决方法去创建一组对象，就可以使用 WeakSet。
+          这种机制的好处在于你不用去担心要删掉对 WeakSet 中已删除对象的引用，JavaScript 会帮你删除！如果对象被删除，当垃圾回收器运行时，该对象也会从 WeakSet 中删除。这样的话，如果你想要一种高效、轻便的解决方法去创建一组对象，就可以使用 WeakSet。
 
-          垃圾回收的发生时间点取决于很多因素。请参阅[MDN 的文档](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management#Garbage_collection)，详细了解用于处理 JavaScript 中的垃圾回收的算法。
+          垃圾回收的发生时间点取决于很多因素。请参阅 [MDN 的文档](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management#Garbage_collection)，详细了解用于处理 JavaScript 中的垃圾回收的算法。
         instructor_notes: ''
         resources: null
   - id: 374322
     key: 17d90bf6-2ce7-45df-8f61-2a50da1b0123
     locale: zh-cn
     version: 1.0.0
-    title: 练习：使用WeakSet（弱集合）
+    title: 练习：使用 WeakSet
     semantic_type: Concept
     updated_at: 'Mon Sep 11 2017 16:43:56 GMT+0000 (UTC)'
     is_public: true
@@ -1548,7 +1548,7 @@ concepts:
         text: |-
           # Map（映射）
 
-          如果说 Set（集合）类似于数组，那么 Map（映射）就类似于对象，因为 Map 存储键值对，和对象包含命名属性及值相类似。 
+          如果说 Set 类似于数组，那么 Map 就类似于对象，因为 Map 存储键值对，和对象包含命名属性及值相类似。 
 
           本质上，Map 是一个可以存储键值对的对象，键和值都可以是对象、原始值或二者的结合。
 
@@ -1574,9 +1574,9 @@ concepts:
         updated_at: 'Mon Sep 11 2017 16:43:58 GMT+0000 (UTC)'
         is_public: true
         text: |
-          ## 编辑 Map（映射）
+          ## 修改 Map
 
-          和 Set（集合）不同，你无法使用值列表创建 Map；而是使用 Map 的 `.set()` 方法添加键值。 
+          和 Set 不同，你无法使用值列表创建 Map；而是使用 Map 的 `.set()` 方法添加键值。 
 
           ```js
           const employees = new Map();
@@ -1656,7 +1656,7 @@ concepts:
         updated_at: 'Mon Sep 11 2017 16:43:59 GMT+0000 (UTC)'
         is_public: true
         text: |-
-          ## 使用Map（映射）
+          ## 使用 Map
 
           构建 Map 后，可以使用 `.has()` 方法，并向其传入一个键来检查 Map 中是否存在该键值对。
 
@@ -1686,7 +1686,7 @@ concepts:
     key: e221c233-0e17-4b16-8aba-c42212c33250
     locale: zh-cn
     version: 1.0.0
-    title: 循环访问 Map（映射）
+    title: 循环访问 Map
     semantic_type: Concept
     updated_at: 'Mon Sep 11 2017 16:44:03 GMT+0000 (UTC)'
     is_public: true
@@ -1706,14 +1706,14 @@ concepts:
         updated_at: 'Mon Sep 11 2017 16:43:59 GMT+0000 (UTC)'
         is_public: true
         text: |-
-          # 循环访问 Map（映射）
+          # 循环访问 Map
           你已经创建了 Map，添加了一些键值对，现在你想循环访问该 Map。幸运的是，可以通过以下三种方式循环访问：
 
           1. 使用 Map 的默认迭代器循环访问每个键或值
           2. 使用新的 `for...of` 循环来循环访问每个键值对
           3. 使用 Map 的 `.forEach()` 方法循环访问每个键值对
 
-          ## 1. 使用 MapIterator（映射迭代器）
+          ## 1. 使用 MapIterator
 
           在 Map 上使用 `.keys()` 和 `.values()` 方法将返回新的迭代器对象，叫做 `MapIterator`。你可以将该迭代器对象存储在新的变量中，并使用 `.next()` 循环访问每个键或值。你所使用的方法将决定迭代器是否能够访问 Map 的键或值。
 
@@ -1757,7 +1757,7 @@ concepts:
         text: |-
           ## 2. 使用 for...of 循环
 
-          Map的第二种循环访问方式是使用 `for...of` 循环。
+          Map 的第二种循环访问方式是使用 `for...of` 循环。
 
           ```js
           for (const member of members) {
@@ -1987,7 +1987,7 @@ concepts:
         text: |-
           ## 3. 使用 forEach 循环
 
-          最后一种循环访问 Map的方式是使用 `.forEach()` 方法。
+          最后一种循环访问 Map 的方式是使用 `.forEach()` 方法。
 
           ```js
           members.forEach((value, key) => console.log(value, key));
@@ -1999,7 +1999,7 @@ concepts:
            'Marcus' 10.25
           ```
 
-          注意，在使用箭头函数后，`forEach` 循环是如何简单地读取数据的。对于 `members` 中的每个值和键值，值和键值将会输出到控制台中。
+          注意，在使用箭头函数后，`forEach` 循环是如何简单地读取数据的。对于 `members` 中的每个 value 和 key，都会被输出到控制台中。
         instructor_notes: ''
         resources: null
   - id: 374327
@@ -2026,7 +2026,7 @@ concepts:
         semantic_type: TextAtom
         updated_at: 'Mon Sep 11 2017 16:44:04 GMT+0000 (UTC)'
         is_public: true
-        text: '> **提示**：如果你已经看过 WeakSet（弱集合）部分，那么这部分相当于复习了。WeakMap 的行为和 WeakSet（弱集合）的一样，只是 WeakMap 处理的是键值对，而不是单个条目。'
+        text: '> **提示**：如果你已经看过 WeakSet 部分，那么这部分相当于复习了。WeakMap 的行为和 WeakSet 的一样，只是 WeakMap 处理的是键值对，而不是单个条目。'
         instructor_notes: ''
         resources: null
       - id: 374229
@@ -2038,7 +2038,7 @@ concepts:
         updated_at: 'Mon Sep 11 2017 16:44:04 GMT+0000 (UTC)'
         is_public: true
         text: |-
-          # 什么是 WeakMap（弱映射）？
+          # 什么是 WeakMap？
 
           WeakMap 和普通 Map 很像，但是具有以下关键区别：
 
@@ -2098,7 +2098,7 @@ concepts:
         key: 147acdd2-2fb0-4ffc-8b06-7ad35c5609c2
         locale: zh-cn
         version: 1.0.0
-        title: WeakMap（弱映射）动画
+        title: WeakMap 动画
         semantic_type: VideoAtom
         updated_at: 'Mon Sep 11 2017 16:44:04 GMT+0000 (UTC)'
         is_public: true
@@ -2124,7 +2124,7 @@ concepts:
         updated_at: 'Wed Sep 20 2017 06:49:30 GMT+0000 (UTC)'
         is_public: true
         text: |-
-          这种机制的好处在于你不用去担心要删掉对 WeakMap（弱映射）中已删除对象的引用，JavaScript 会帮你删除！如果对象被删除，当垃圾回收器运行时，该对象也会从弱映射中删除。这样的话，如果你想要一种高效、轻便的解决方法去创建一组具有元数据的对象，就可以使用 WeakMap。
+          这种机制的好处在于你不用去担心要删掉对 WeakMap 中已删除对象的引用，JavaScript 会帮你删除！如果对象被删除，当垃圾回收器运行时，该对象也会从弱映射中删除。这样的话，如果你想要一种高效、轻便的解决方法去创建一组具有元数据的对象，就可以使用 WeakMap。
 
           垃圾回收的发生时间点取决于很多因素。请参阅 [MDN 的文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Memory_Management#垃圾回收)，详细了解用于处理 JavaScript 中的垃圾回收的算法。
         instructor_notes: ''
@@ -2203,7 +2203,7 @@ concepts:
           });
           ```
 
-          该代码在我发出请求时将会创建一个promise，并且在几秒钟后启动。然后需要在 `createSundae` 函数中执行几个步骤。
+          该代码在我发出请求时将会创建一个 promise，并且在几秒钟后启动。然后需要在 `createSundae` 函数中执行几个步骤。
 
           ## 指示一个成功请求或者失败请求
 
@@ -2219,7 +2219,7 @@ concepts:
         updated_at: 'Mon Sep 11 2017 16:44:06 GMT+0000 (UTC)'
         is_public: true
         text: |-
-          该函数被传递给我们向 Promise 构造函数提供的函数 - 通常单词"resolve”用于表示当请求成功完成时，应该调用此函数。请注意第一行的 `resolve`：
+          该函数被传递给我们向 Promise 构造函数提供的函数 - 通常单词"resolve"用于表示当请求成功完成时，应该调用此函数。请注意第一行的 `resolve`：
 
           ```js
           new Promise(function (resolve, reject) {
@@ -2246,7 +2246,7 @@ concepts:
         updated_at: 'Mon Sep 11 2017 16:44:07 GMT+0000 (UTC)'
         is_public: true
         text: |-
-          如果请求存在问题，无法完成请求，那么我们可以使用传递给该函数的第二个函数。通常，该函数存储在一个叫做"reject”的标识符中，表示如果请求因为某种原因失败了，应该使用该函数。请看看第一行的 `reject`：
+          如果请求存在问题，无法完成请求，那么我们可以使用传递给该函数的第二个函数。通常，该函数存储在一个叫做"reject"的标识符中，表示如果请求因为某种原因失败了，应该使用该函数。请看看第一行的 `reject`：
 
           ```js
           new Promise(function (resolve, reject) {
@@ -2360,7 +2360,7 @@ concepts:
     key: 8e7ad09f-5f31-4a62-b6ee-9fed8b177474
     locale: zh-cn
     version: 1.0.0
-    title: Proxy（代理）简介
+    title: Proxy 简介
     semantic_type: Concept
     updated_at: 'Mon Sep 11 2017 16:44:09 GMT+0000 (UTC)'
     is_public: true
@@ -2414,14 +2414,14 @@ concepts:
         updated_at: 'Mon Sep 11 2017 16:44:09 GMT+0000 (UTC)'
         is_public: true
         text: |
-          要创建 Proxy 对象，我们使用 Proxy 构造函数 `new Proxy();`。Proxy 构造函数接收两个项目：
+          要创建 Proxy（代理）对象，我们使用 Proxy 构造函数 `new Proxy();`。Proxy 构造函数接收两个项目：
           * 它将要代理的对象
           * 包含将为被代理对象处理的方法列表的对象
 
           第二个对象叫做**处理器**.
 
           ## Proxy内的一个传递
-          创建 Proxy 的最简单方式是提供对象和空的handler（处理器）对象。
+          创建 Proxy 的最简单方式是提供对象和空的 handler（处理器）对象。
 
           ```js
           var richard = {status: 'looking for work'};
@@ -2430,7 +2430,7 @@ concepts:
           agent.status; // returns 'looking for work'
           ```
 
-          上述代码并没有对 Proxy 执行任何特殊操作，只是将请求直接传递给源对象！如果我们希望 Proxy 对象截获请求，这就是handler（处理器）对象的作用了！
+          上述代码并没有对 Proxy 执行任何特殊操作，只是将请求直接传递给源对象！如果我们希望 Proxy 对象截获请求，这就是 handler 对象的作用了！
         instructor_notes: ''
         resources: null
       - id: 374242
@@ -2459,7 +2459,7 @@ concepts:
           agent.status; // logs out the richard object (not the agent object!) and the name of the property being accessed (`status`)
           ```
 
-          在上述代码中，`handler` 对象具有一个 `get` 方法（称为 "trap"，因为它被用于 Proxy 中）。当代码 `agent.status;` 在最后一行运行时，因为存在 `get` 捕获器，它将截获该调用以获得 `状态` 属性并运行 `get` 捕获器函数。这样将会输出 Proxy 的目标对象（`richard` 对象），然后输出被请求的属性（`状态` 属性）的名称。_它的作用就是这些！_它不会实际地输出属性！这很重要 - *如果使用了捕获器，你需要确保为该捕获器提供所有的功能*。
+          在上述代码中，`handler` 对象具有一个 `get` 方法（因为被用在 Proxy 中，所以将"function"（方法）称之为"trap"（捕获器））。当代码 `agent.status;` 在最后一行运行时，因为存在 `get` 捕获器，它将截获该调用以获得 `status`（状态）属性并运行 `get` 捕获器方法。这样将会输出 Proxy 的目标对象（`richard` 对象），然后输出被请求的属性（`status` 属性）的名称。_它的作用就是这些！_它不会实际地输出属性！这很重要 —— *如果使用了捕获器，你需要确保为该捕获器提供所有的功能*。
 
           ### 从 Proxy 内部访问目标对象
           如果我们想真正地提供真实的结果，我们需要返回目标对象的属性：
@@ -2517,7 +2517,7 @@ concepts:
           agent.payRate; // $850 the actor's actual pay
           ```
 
-          在上述代码中，注意 `set` 捕获器会检查是否设置了 `payRate` 属性。如果设置了，Proxy（代理）就从中拿走 15% 的费用作为自己的佣金！当演员的薪酬是一千美元时，因为 `payRate` 属性已设置，代码从中扣除 15% 的费用，并将实际 `payRate` 属性设为 `850`；
+          在上述代码中，注意 `set` 捕获器会检查是否设置了 `payRate` 属性。如果设置了，Proxy 就从中拿走 15% 的费用作为自己的佣金！当演员的薪酬是一千美元时，因为 `payRate` 属性已设置，代码从中扣除 15% 的费用，并将实际 `payRate` 属性设为 `850`；
         instructor_notes: ''
         resources: null
       - id: 374243
@@ -2530,7 +2530,7 @@ concepts:
         is_public: true
         text: |-
           ## 其他 trap
-          我们查看了 `get` 和 `set` trap（可能是你最常用到的捕获器），但是实际上总共有 13 种不同的捕获器，它们都可以用在处理器中！
+          我们查看了 `get` 和 `set`（可能是你最常用到的捕获器），但是实际上总共有 13 种不同的捕获器，它们都可以用在处理器中！
 
           1. [get trap](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/get) - 使 proxy 能处理对属性访问权的调用
           2. [set trap](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set) - 使 proxy 能将属性设为新值
@@ -2604,7 +2604,7 @@ concepts:
 
           注意，并没有显示 `age` 和 `height` 属性那样生成的 `getting the "weight" property` 消息。
 
-          对于 ES6 中的Proxy，我们不需要提前知道这些属性*：
+          对于 ES6 中的 Proxy，我们不需要提前知道这些属性*：
 
           ```js
           const proxyObj = new Proxy({age: 5, height: 4}, {
@@ -2656,8 +2656,8 @@ concepts:
           * 使用 `new Proxy()` 构造函数
             * 将被代理的对象传入为第一项
             * 第二个对象是 handler（处理器）对象
-          * handler 对象由 13 种不同的"trap”之一构成
-          * trap（捕获器）是一种函数，将截获对属相的调用，让你运行代码
+          * handler 对象由 13 种不同的 trap（捕获器）之一构成
+          * trap 是一种函数，将截获对属相的调用，让你运行代码
           * 如果未定义 trap，默认行为会被发送给目标对象
 
           Proxy 是一种强大的创建和管理对象之间的交互的新方式。
@@ -2761,7 +2761,7 @@ concepts:
           getEmployee {[[GeneratorStatus]]: "suspended", [[GeneratorReceiver]]: Window}
           ```
 
-          ...额，什么？函数顶部的"the function has started”文本去哪了？为何控制台中没有输出任何姓名？问的好，但是先做个小练习。
+          呃，什么？函数顶部的"the function has started"文本去哪了？为何控制台中没有输出任何姓名？问的好，但是先做个小练习。
         instructor_notes: ''
         resources: null
       - id: 374248
@@ -2877,7 +2877,7 @@ concepts:
         updated_at: 'Mon Sep 11 2017 16:44:13 GMT+0000 (UTC)'
         is_public: true
         text: |-
-          ## 关键字 Yield 
+          ## 关键字 yield 
 
           关键字 `yield` 是 ES6 中新出现的关键字。只能用在生成器函数中。`yield` 会导致生成器暂停下来。我们向我们的生成器中添加 `yield`，试试看：
 
@@ -2920,7 +2920,7 @@ concepts:
           Diego
           ```
 
-          它能完全记住上次停下的地方！它获取到数组中的下一项 (Diego)，记录它，然后再次触发了 `yield`，再次暂停。
+          它能完全记住上次停下的地方！它获取到数组中的下一项（Diego），记录它，然后再次触发了 `yield`，再次暂停。
 
           现在能够很好的暂停了，但是如果将数据从生成器返回到外面的世界呢？我们可以使用 `yield` 实现这一点。
         instructor_notes: ''
@@ -3158,7 +3158,7 @@ concepts:
     key: 390df346-c727-4a85-9048-e4787fb0b751
     locale: zh-cn
     version: 1.0.0
-    title: 第 3 节课总结
+    title: 第 3 课总结
     semantic_type: Concept
     updated_at: 'Mon Sep 11 2017 16:44:16 GMT+0000 (UTC)'
     is_public: true
@@ -3170,7 +3170,7 @@ concepts:
         key: a5a6d73b-ee41-4f51-80c0-348823a6bd85
         locale: zh-cn
         version: 1.0.0
-        title: 第 3 节课总结
+        title: 第 3 课总结
         semantic_type: VideoAtom
         updated_at: 'Mon Sep 11 2017 16:44:16 GMT+0000 (UTC)'
         is_public: true
